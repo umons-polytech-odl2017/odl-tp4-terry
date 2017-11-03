@@ -12,13 +12,9 @@ public class Teacher extends Person {
 		this.officeLocation = officeLocation;
 	}
 
-	public PhoneNumber getOfficePhone() {
-		return officePhone;
-	}
+	public PhoneNumber getOfficePhone() { return officePhone; }
 
-	public Location getOfficeLocation() {
-		return officeLocation;
-	}
+	public Location getOfficeLocation() { return officeLocation; }
 
 	@Override
 	public String toString() {
