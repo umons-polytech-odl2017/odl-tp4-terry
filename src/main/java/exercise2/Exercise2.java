@@ -1,9 +1,7 @@
 package exercise2;
 
-import java.io.IOException;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
+import java.io.*;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -17,7 +15,13 @@ public class Exercise2 {
 		}
 	}
 
-	public static Classroom load(Path filePath) { return null; }
+	public static Classroom load(Path filePath) throws IOException {
+		filePath = Paths.get("classroom.ser");
+		Charset utf8Charset = Charset.forName("UTF-8");
+		try(BufferedReader reader = Files.newBufferedReader(filePath, utf8Charset)){
+		reader.lines().forEach(line ->...);
+		}
+	}
 
 	public static void main(String[] args) throws IOException {
 		Teacher teacher = new Teacher("Claire", "Barnett",
